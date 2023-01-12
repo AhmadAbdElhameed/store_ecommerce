@@ -1,5 +1,13 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
+    <style>
+        nav svg{
+            height: 20px;
+        }
+        nav .hidden{
+            display: block;
+        }
+    </style>
     <main class="main">
         <div class="page-header breadcrumb-wrap">
             <div class="container">
