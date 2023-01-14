@@ -1,5 +1,13 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
+    <style>
+        nav svg{
+            height: 20px;
+        }
+        nav .hidden{
+            display: block;
+        }
+    </style>
     <main class="main">
         <div class="page-header breadcrumb-wrap">
             <div class="container">
@@ -64,7 +72,7 @@
                                     <div class="product-cart-wrap mb-30">
                                         <div class="product-img-action-wrap">
                                             <div class="product-img product-img-zoom">
-                                                <a href="product-details.html">
+                                                <a href="{{route ('product.details',['slug'=>$product->slug])}}">
                                                     <img class="default-img" src="{{asset ('assets/imgs/shop/product-') }}{{$product->id}}-1.jpg" alt="{{$product->name}}">
                                                     <img class="hover-img" src="{{asset ('assets/imgs/shop/product-') }}{{$product->id}}-2.jpg" alt="{{$product->name}}">
                                                 </a>
