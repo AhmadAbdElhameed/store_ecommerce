@@ -3,7 +3,7 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html" rel="nofollow">Home</a>
+                    <a href="{{route('home.index')}}" rel="nofollow">Home</a>
                     <span></span> Shop
                     <span></span> Your Cart
                 </div>
@@ -45,9 +45,9 @@
                                         <td class="price" data-title="Price"><span>${{$item->model->regular_price}}</span></td>
                                         <td class="text-center" data-title="Stock">
                                             <div class="detail-qty border radius  m-auto">
-                                                <a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
-                                                <span class="qty-val">1</span>
-                                                <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
+                                                <a href="#" class="qty-down" wire:click.prevent = "decreaseQuantity('{{$item->rowId}}')"><i class="fi-rs-angle-small-down"></i></a>
+                                                <span class="qty-val">{{$item->qty}}</span>
+                                                <a href="#" class="qty-up" wire:click.prevent = "increaseQuantity('{{$item->rowId}}')"><i class="fi-rs-angle-small-up"></i></a>
                                             </div>
                                         </td>
                                         <td class="text-right" data-title="Cart">
