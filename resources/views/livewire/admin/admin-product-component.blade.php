@@ -27,7 +27,7 @@
                                         All Products
                                     </div>
                                     <div class="col-md-6">
-
+                                        <a href="{{route('admin.products.add')}}" class="btn btn-success float-end">Add New Product</a>
                                     </div>
                                 </div>
                             </div>
